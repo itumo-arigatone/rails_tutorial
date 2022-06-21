@@ -4,14 +4,18 @@ Using Docker with Rails tutorial.
 https://docs.docker.com/samples/rails/  
 ここを参考に環境構築をする。
 
-```
-first docker-compose run --no-deps web rails _6.0.4_ new hello_app --force --database=postgresql
+## 1.1 バージョンを指定してhello_appプロジェクトをスケルトンを使用して作る？
+```sh
+cd hello_app
+docker-compose run --no-deps web rails new . --force --database=postgresql
 ```
 
+## 1.2 権限設定
 ```sh
 sudo chown -R $USER:$USER .
 ```
 
+## 1.3 環境のビルド
 ```
 docker-compose build
 ```
