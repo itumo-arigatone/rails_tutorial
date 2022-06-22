@@ -26,3 +26,20 @@ docker-compose build
 ```
 docker-compose up
 ```
+
+# プロジェクトができている状態から環境構築する時
+途中から環境を構築すると `rails new .`をしていないため、モジュールがインストールされていない。  
+なので、コンテナ内に入って`yarn install`でwbpackerをインストールする。  
+```sh
+sudo chown -R $USER:$USER .
+```
+```
+docker-compose build
+docker-compose up -d
+docker exec -it コンテナ名 bash
+```
+```sh
+yarn install
+# 場合によっては
+bundle install
+```
