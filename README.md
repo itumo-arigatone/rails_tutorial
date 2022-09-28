@@ -42,4 +42,6 @@ docker exec -it コンテナ名 bash
 yarn install
 # 場合によっては
 bundle install
+# dbがある場合は
+rake db:migrate
 ```
