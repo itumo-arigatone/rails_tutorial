@@ -45,3 +45,11 @@ bundle install
 # dbがある場合は
 rake db:migrate
 ```
+
+# byebugを使用する場合
+```
+docker ps
+docker attatch <container name>
+```
+上記コマンド実行後にdebuggerの仕込んであるページを表示する。
+Ctrl + C で抜けるとコンテナごと終了するので注意。＊抜け方わからん
